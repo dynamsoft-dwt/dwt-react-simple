@@ -10,8 +10,7 @@ class App extends Component {
     super(props);
     this.state = { bShowDWT: false }
   }
-  productKey = 't00891wAAABbdLEJATW3/5y5Z9zPHbvN0BoZRljs0AswZsu9Athx99uwWOdwzNYI2VwhYWZut2jfa3p+5RVLaTxvM3OPKwwcuBOa7BeQO0gQ1DWCGJVMMN2gAK5g=';
-  showDWT() {
+   showDWT() {
     this.setState({ bShowDWT: true });
   }
   render() {
@@ -26,9 +25,7 @@ class App extends Component {
         </header>
         <main className="App-main">
           {this.state.bShowDWT
-            ? <DWT
-              productKey={this.productKey}
-            />
+            ? <DWT/>
             : <button onClick={() => this.showDWT()} >Let's get started!</button>
           }
         </main>
